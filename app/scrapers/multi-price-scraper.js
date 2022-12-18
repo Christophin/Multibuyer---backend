@@ -83,11 +83,13 @@ exports.multiPriceScraper = async(browser, company) => {
         await page.waitForSelector('#sc-buy-box-ptc-button')
 		await page.click("#sc-buy-box-ptc-button span input")
         await page.waitForSelector("#ap_email")
-        await page.$eval('#ap_email', el => el.value = 'testingamazon123456789@gmail.com');
+        // add email below!
+        await page.$eval('#ap_email', el => el.value = 'ADD EMAIL HERE');
         await page.click("#continue")
         
         await page.waitForSelector("#ap_password")
-        await page.$eval('#ap_password', el => el.value = "catdog34")
+        // add password below
+        await page.$eval('#ap_password', el => el.value = "ADD PASSWORD HERE")
         await page.click("#signInSubmit")
     }
 }
